@@ -6,13 +6,25 @@ import Input from './Input';
 import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [colorValue, setColorValue ] = useState("");
+  const [hexValue, setHexValue] = useState("");
+  const [isDarkText, setIsDarkText] = useState(true);
 
   return (
     <>
       <div>
-          <ColorBox />
-          <Input />
+          <ColorBox 
+            colorValue={colorValue}
+            hexValue={hexValue}
+            isDarkText={isDarkText}
+          />
+          <Input 
+            colorValue={colorValue}
+            setColorValue={setColorValue}
+            setHexValue={setHexValue}
+            isDarkText={isDarkText}
+            setIsDarkText={setIsDarkText}
+          />
       </div>
     </>
   )

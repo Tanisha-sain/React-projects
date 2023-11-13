@@ -67,3 +67,23 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+.box{
+  width: 250px;
+  height: 250px;
+  border: 2px solid black;
+  text-align: center;
+  line-height: 250px;
+  font-size: 26px;
+  border-radius: 6px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+.InputBox{
+  width: 220px;
+  margin-top: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  font-size: 20px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: 1px solid black;
+  outline: none;
+}

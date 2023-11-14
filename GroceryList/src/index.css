@@ -86,15 +86,19 @@ header,footer{
   padding: 10px;
   font-weight: bold;
 }
+header{
+  position: sticky;
+  top: 0;
+}
 footer{
-  position: absolute;
+  position: fixed;
   bottom: 0;
   font-weight: 400;
   font-size: 25px;
 }
 main{
   width: 100%;
-  padding: 25px 35px;
+  padding: 25px 35px 100px 35px;
 }
 .searchForm,
 .addForm{

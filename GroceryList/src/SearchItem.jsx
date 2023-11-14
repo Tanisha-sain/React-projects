@@ -1,14 +1,15 @@
 import React from 'react';
 
-const SearchItem = () => {
+const SearchItem = ({ search, setSearch }) => {
   return (
-    <form className='searchForm'>
+    <form className='searchForm' onSubmit={(e) => e.preventDefault()}>
         <input 
-            autoFocus
+            role='searchbox'
             type="text"
             placeholder='Search Item'
             className='searchItem'
-            required
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
         />
     </form>
   )

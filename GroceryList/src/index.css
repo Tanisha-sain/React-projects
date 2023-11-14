@@ -92,15 +92,39 @@ footer{
   font-weight: 400;
   font-size: 25px;
 }
-main,
-.searchForm{
+main{
   width: 100%;
   padding: 25px 35px;
 }
-.searchForm{
-  padding-bottom: 0;
+.searchForm,
+.addForm{
+  width: 100%;
+  border-bottom: 1px solid rgb(219, 214, 214);
+  padding: 10px 35px;
 }
-.searchItem{
+.addForm{
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+.addForm button{
+  border: none;
+}
+.addForm svg{
+  width: 51px;
+  height: 51px;
+  background-color: black;
+  color: white;
+  padding: 7px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.addForm svg:hover,
+.addForm svg:focus{
+  background-color: gray;
+}
+.searchItem,
+.addItem{
   width: 100%;
   padding: 10px 25px;
   border-radius: 5px;
@@ -115,11 +139,12 @@ main ul{
   gap: 15px;
 }
 main ul li{
+  list-style-type: none;
   display: flex;
   justify-content: space-between;
   text-align: center;
   background-color: lightgray;
-  padding: 20px 25px;
+  padding: 15px 25px;
   border-radius: 5px;
 }
 main ul li input[type="checkbox"]{
@@ -143,4 +168,7 @@ main svg:hover{
   width: 34px;
   height: 34px;
   color: red;
+}
+main svg:focus{
+  outline: none;
 }

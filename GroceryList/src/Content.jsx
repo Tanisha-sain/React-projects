@@ -1,25 +1,18 @@
 import React from 'react';
-import { FaTrash } from 'react-icons/fa';
+// import { FaTrash } from 'react-icons/fa';
+import ListItem from './ListItem';
 
-const Content = ( { items, setItems }) => {
+const Content = ( { items, handleDelete, handleCheck }) => {
   return (
     <main>
-        <ul>
-            {
-                items.map((item) => (
-                    <li>
-                        <input 
-                            type="checkbox" 
-                            id='input'
-                            checked={item.checked}
-                            required
-                        />
-                        <label htmlFor="input">{item.item}</label>
-                        <FaTrash />
-                    </li>
-                ))
-            }
-        </ul>
+        {items.length ? 
+            <ListItem 
+                items={items}
+                handleDelete={handleDelete}
+                handleCheck={handleCheck}
+            /> : 
+            <p style={ { textAlign : 'center' , fontSize: '20px'}}>Your list is empty.</p>
+        }
     </main>
   )
 }

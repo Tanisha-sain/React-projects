@@ -12,6 +12,7 @@ function App() {
   const [newItem, setNewItem] = useState('');
   const [search, setSearch] = useState('');
   const [fetchError, setFetchError] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchItems = async () => {
@@ -19,12 +20,12 @@ function App() {
         const response = await fetch(API_URL);
         if(!response.ok) throw Error ('Did not receive expected data');
         const listItems = await response.json();
-        console.log(listItems);
         setItems(listItems);
         setFetchError(null);
       }catch (err){
-        console.log(err.message);
         setFetchError(err.message);
+      }finally {
+        setIsLoading(false);
       }
     }
     setTimeout(() => {
@@ -69,8 +70,9 @@ function App() {
         setSearch={setSearch}
       />
       <main>
-        {fetchError && <p style={{ color : 'red', textAlign: 'center' }}>{`Error : ${fetchError}`}</p>}
-        {!fetchError && <Content 
+        {isLoading && <p style={{ textAlign: 'center', fontSize : '25px' }}>Loading items...</p>}
+        {fetchError && <p style={{ color : 'red', textAlign: 'center', fontSize : '25px' }}>{`Error : ${fetchError}`}</p>}
+        {!fetchError && !isLoading && <Content 
           items={items.filter(item => ((item.item).toLowerCase()).includes(search.toLowerCase()))}
           setItems={setItems}
           handleDelete={handleDelete}

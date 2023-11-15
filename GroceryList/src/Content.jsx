@@ -11,7 +11,7 @@ const Content = ( { items, handleDelete, handleCheck }) => {
                 handleDelete={handleDelete}
                 handleCheck={handleCheck}
             /> : 
-            <p style={ { textAlign : 'center' , fontSize: '20px'}}>Your list is empty.</p>
+            <p style={ { textAlign : 'center' , fontSize: '25px'}}>Your list is empty.</p>
         }
     </>
   )

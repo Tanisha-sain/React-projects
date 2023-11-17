@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Form from './Form';
-
+import Body from './Body';
 function App() {
   const API_URL = 'https://jsonplaceholder.typicode.com/';
   const [reqType, setReqType] = useState('users');
@@ -21,7 +21,13 @@ function App() {
 
   return (
     <>
-      <Form reqType={reqType} setReqType={setReqType}/>
+      <Form 
+        reqType={reqType} 
+        setReqType={setReqType}
+      />
+      <Body 
+        items={items}
+      />
     </>
   )
 }

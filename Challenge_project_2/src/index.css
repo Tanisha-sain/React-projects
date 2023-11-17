@@ -71,6 +71,7 @@ button:focus-visible {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 body{
   width: 100%;
@@ -79,7 +80,7 @@ body{
 form{
   width: 100%;
 }
-div{
+form div{
   display: flex;
   gap: 5px;
   margin: 5px;
@@ -99,4 +100,13 @@ button{
   color: black;
   font-weight: bold;
   font-size: 21px;
+}
+ul{
+  margin: 30px;
+}
+li{
+  margin: 20px;
+  font-size: 19px;
+  line-height: 21px;
+  letter-spacing: 1px;
 }

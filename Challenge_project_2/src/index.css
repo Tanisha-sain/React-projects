@@ -79,6 +79,10 @@ body{
 }
 form{
   width: 100%;
+  position: fixed;
+  top: 0;
+  padding-top: 2px;
+  background-color: white;
 }
 form div{
   display: flex;
@@ -101,6 +105,9 @@ button{
   font-weight: bold;
   font-size: 21px;
 }
+#root>div{
+  padding-top: 57px;
+}
 ul{
   margin: 30px;
 }
@@ -109,4 +116,18 @@ li{
   font-size: 19px;
   line-height: 21px;
   letter-spacing: 1px;
+}
+.table-container{
+  width: 100%;
+  height: fit-content;
+  padding: 10px;
+}
+table{
+  border-spacing: 0;
+  border: 1px solid black;
+
+}
+td{
+  border: 1px solid black;
+  padding: 10px 20px;
 }
